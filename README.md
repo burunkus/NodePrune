@@ -19,10 +19,10 @@ Note: This project is inspired by [DropNet](https://github.com/tanchongmin/DropN
 - At the root folder of this project create a folder named 'Caches' to store the model caches. If you clone this repo you don't have to create the folder as I have already created it. 
 
 #### Files in this project
-There are two files contained in this project, a Jupyter Notebook named `dropnet_oop.ipynb` and a python file named `dropnet_oop.py`. Both contain the same code though the Jupyter Notebook is more pleasing to the eye. 
+There are two files contained in this project, a Jupyter Notebook named `node_prune.ipynb` and a python file named `node_prune.py`. Both contain the same code though the Jupyter Notebook is more pleasing to the eye. 
 
 #### Design 
-In each file, there is a super class named `NodePrune` from which other base classes inherit from. `NodePrune` contains methods that are required for all experiments, each of the base classes that inherits from `NodePrune` creates a neural network model as discussed in the paper. There were three base models, model a, b and c and bigger models - VGG19 and ResNet18. In code, a Multi-layer perceptron (Model A) is represented as `class MLPModelA`, a CNN model (Model B) as `class CnnModelB`, a CNN model, Model C as `class CnnModelC`, ResNet18 as `class ResNet18` and VGG19 as `class Vgg19`. Subsequently, each of the experiment in the paper is a class with a `run` method. For example, a CNN experiment on the MNIST dataset performed on Model B having two convolution layers each with 64 filters is represented as `class CnnMnistExperimentModelB_64_64()`. 
+In each file, there is a super class named `NodePrune` from which other base classes inherit from. `NodePrune` contains methods that are required for all experiments, each of the base classes that inherits from `NodePrune` creates a neural network model as discussed in the paper. There were three base models, model a, b and c and bigger models - VGG19 and ResNet18. In code, a Multi-layer perceptron (Model A) is represented as `class MlpModelA`, a CNN model (Model B) as `class CnnModelB`, a CNN model, Model C as `class CnnModelC`, ResNet18 as `class ResNet18` and VGG19 as `class Vgg19`. Subsequently, each of the experiment in the paper is a class with a `run` method. For example, a CNN experiment on the MNIST dataset performed on Model B having two convolution layers each with 64 filters is represented as `class CnnMnistExperimentModelB_64_64()`. 
 
 #### Running the python file
 * Start by creating a virtual environment
