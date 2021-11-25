@@ -39,7 +39,7 @@ In each file, there is a super class named `NodePrune` from which other base cla
   * Install sklearn: `conda install -c anaconda scikit-learn`
   * Install matplotlib: `conda install -c conda-forge matplotlib`
   * For each of the installs, always accept the installations by typing `y` so it does not get killed on palmetto
-* Navigate to the directory where you have my code - if you cloned this repo the files should all be in a folder named `Dropnet`. So cd into it: `cd Dropnet`
+* Navigate to the directory where you have my code - if you cloned this repo the files should all be in a folder named `Dropnet`. So cd into it: `cd NodePrune`
 * Create a batch job (a .pbs file) named for example `test_Ebuka_Okpala.pbs`
   * The file should contain the following
   ```
@@ -55,7 +55,7 @@ In each file, there is a super class named `NodePrune` from which other base cla
   source activate put_your_env_name_here
 
   cd /home/put_your_username_here/Dropnet/
-  python dropnet_oop.py
+  python node_prune.py
   ```
   * You can use vim: `vim test_Ebuka_Okpala.pbs` to create the file, when vim open type `i` to start typing all the above. When done hit the `esc` button on your keyboard, then hit `shit + :` and type `wq`. The file should be in Dropnet folder. 
   * Or you could simply create this file using you favorite editor and upload it to the Dropnet folder Or create directly in Palmetto [JupyterLab interface](https://www.palmetto.clemson.edu/palmetto/basic/jupyter/) 
@@ -66,7 +66,7 @@ In each file, there is a super class named `NodePrune` from which other base cla
   * Batch jobs don't print outputs until it finishes. If the job finishes successfully you will get an email and the output should be in the file `Ebuka_output_file.txt`. To quickly verify that my code works you might consider running the Jupyter Notebook file - see below. 
 
 
-**Note**: running the above will only run the first experiment as the rest are commented out. There are 16 experiments that can be ran synchronuously by removing the comments from lines `2061`. This clearly takes time as each experiment will have to finish before the next begins. To cut down on the wait time I ran each experiment one after the other by commenting the rest of the experiments. You can do the same by running each experiment one after the other. To do so, locate the entry point of the program at line `2058` and comment and uncomment the experiment you desire to run. You can remove all comments if you can wait but this takes time, the ResNet and Vgg experiments needs at least 20 hours. 
+**Note**: running the above will only run the first experiment as the rest are commented out. There are 16 experiments that can be ran synchronuously by removing the comments from lines `2320`. This clearly takes time as each experiment will have to finish before the next begins. To cut down on the wait time I ran each experiment one after the other by commenting the rest of the experiments. You can do the same by running each experiment one after the other. To do so, locate the entry point of the program at line `2317` and comment and uncomment the experiment you desire to run. You can remove all comments if you can wait but this takes time, the ResNet and Vgg experiments needs at least 59 hours. 
 
 #### Running the Jupyter Notebook file
 - Start by creating a virtual environment
@@ -87,7 +87,7 @@ In each file, there is a super class named `NodePrune` from which other base cla
 - Create a kernel and give it a name: `python -m ipykernel install --user --name put_your_env_name_here --display-name "tf-gpu (put_your_env_name_here)"`
 - Log into the friendly Palmetto [JupyterHub interface](https://www.palmetto.clemson.edu/jhub/hub/home)
 - Choose your hadware configuration: `ncpus` 16, `ngpu` 1, `mem` 120gb, `GPU Model` k40, `Interconnect` FDR,  `Walltime` choose enough time maybe 30 minutes for testing purposes. JupyterHub is interactive, if you leave it ideal it disconnects.   
-- Open `dropnet_oop.ipynb` 
+- Open `node_prune.ipynb` 
 - Click `kernel` from the top of the page, click `change kernel`, you should see the kernel you created in the terminal e.g `tf-gpu (put_your_env_name_here)`. Select it 
 - Run each of the cells 
 - Run section 10 - the entry point of the program to start execution
