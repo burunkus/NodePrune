@@ -39,7 +39,7 @@ In each file, there is a super class named `NodePrune` from which other base cla
   * Install sklearn: `conda install -c anaconda scikit-learn`
   * Install matplotlib: `conda install -c conda-forge matplotlib`
   * For each of the installs, always accept the installations by typing `y` so it does not get killed on palmetto
-* Navigate to the directory where you have my code - if you cloned this repo the files should all be in a folder named `Dropnet`. So cd into it: `cd NodePrune`
+* Navigate to the directory where you have my code - if you cloned this repo the files should all be in a folder named `NodePrune`. So cd into it: `cd NodePrune`
 * Create a batch job (a .pbs file) named for example `test_Ebuka_Okpala.pbs`
   * The file should contain the following
   ```
