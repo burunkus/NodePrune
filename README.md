@@ -5,7 +5,7 @@ Paper title: NodePrune: Sparsifying Neural Networks via Iterative Pruning
 
 Implementation chioce: A - implemented using Object Oriented Programming
 
-Note: This project is inspired by [DropNet](https://github.com/tanchongmin/DropNet) and improves on its MLP task. 
+Note: This project is inspired by [DropNet](https://github.com/tanchongmin/DropNet) and provides some improvements. 
 
 #### Required Installations
 - tensorflow >= v2 or tensorflow-gpu (Used this but either will work)
