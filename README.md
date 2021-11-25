@@ -44,8 +44,8 @@ In each file, there is a super class named `NodePrune` from which other base cla
   * The file should contain the following
   ```
   #PBS -N test_Ebuka_code_job
-  #PBS -o /home/put_your_username_here/Dropnet/Ebuka_output_file.txt
-  #PBS -e /home/put_your_username_here/Dropnet/Ebuka_error_file.txt
+  #PBS -o /home/put_your_username_here/NodePrune/Ebuka_output_file.txt
+  #PBS -e /home/put_your_username_here/NodePrune/Ebuka_error_file.txt
   #PBS -l select=1:ncpus=16:ngpus=1:gpu_model=k40:mem=125gb:interconnect=fdr,walltime=72:00:00
   #PBS -m abe
   #PBS -M put_your_email_here@clemson.edu
